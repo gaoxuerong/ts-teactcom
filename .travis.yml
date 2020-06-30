@@ -13,6 +13,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKENS
   keep_history: true
-  local_dir: storybook-statics
+  local_dir: storybook-static
   on:
     branch: master

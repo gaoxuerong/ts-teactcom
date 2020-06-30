@@ -30,19 +30,19 @@ const defaultProgress = () => {
 }
 const progressWithPercent = () => (
   <>
-  <Progress  percent={ProgressPercent.a} className = "progress-bar-inner">inner Progress</Progress>
-  <Progress percent={ProgressPercent.a} className = "progress-bar-outer">outer Progress</Progress>
-  <Progress percent={ProgressPercent.a} className = "progress-bar"> Progress</Progress>
+  <Progress  percent={ProgressPercent.a}>inner Progress</Progress>
+  <Progress percent={ProgressPercent.a}>outer Progress</Progress>
+  <Progress percent={ProgressPercent.a}> Progress</Progress>
   </>
 )
 const progressWithType = () => (
   <>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Default}>Default Progress</Progress>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Primary}>Primary Progress</Progress>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Danger}>Danger Progress</Progress>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Warning}>Warning Progress</Progress>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Info}>Info Progress</Progress>
-    <Progress percent={ProgressPercent.a} theme={ProgressType.Success}>Success Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Default Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Primary Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Danger Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Warning Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Info Progress</Progress>
+    <Progress percent={ProgressPercent.a} >Success Progress</Progress>
   </>
 )
 storiesOf('progress component',module)

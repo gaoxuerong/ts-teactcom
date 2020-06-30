@@ -1,20 +1,20 @@
 import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
-import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
+import fontawesome from "@fortawesome/fontawesome-free-solid";
 import Icon,{ ThemeProps } from './icon';
 import '../../styles/index.less';
 
 const styles: React.CSSProperties = {
   textAlign: 'center'
 }
-
+console.log(fontawesome);
 const CenterDecorator = (storyFn: any) => <div style={styles}>{storyFn()}</div>
 
 const styleIcon = () => (
   <>
-    <Icon icon= {faCheckSquare} className= { `icon-${ThemeProps.Success}`}/>
-    <Icon icon= {faCoffee} className= { `icon-${ThemeProps.Success}` }/>
+    <Icon icon= "address-card" className= { `icon-${ThemeProps.Success}`}/>
+    <Icon icon= "address-card" className= { `icon-${ThemeProps.Success}` }/>
     <Icon icon="address-card" className= { `icon-${ThemeProps.Success}` }/>
     <Icon icon="bath" className= { `icon-${ThemeProps.Success}` }/>
     <Icon icon="address-book" className= { `icon-${ThemeProps.Success}` }/>

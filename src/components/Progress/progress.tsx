@@ -33,6 +33,5 @@ const Progress: FC<ProgressProps> = (props) => {
 Progress.defaultProps = {
   strokeHeight: 15,
   showText: true,
-  theme: "primary",
 }
 export default Progress;

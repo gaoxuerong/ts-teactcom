@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+env:
+  - CI=true
+script:
+  - npm run build-storybook
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Update tools"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKENS
+  local_dir: storybook-statics
+  on:
+    branch:
+    only:
+    - master
